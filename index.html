@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <title>Javascript exercise</title>
+</head>
+<body>
+  <div class="container">
+    <a href="pagetwo.html" class="btn btn-secondary">Move to 2nd Page</a>
+    <h1 class="display-1">Sample of DocumentElement</h1>
+    <h2 class="display-2 fw-bolder" id="helloworld"></h2>
+    <button type="button" class="btn btn-primary" id="btnChange"></button>
+    <h5 class="display-4">Events Samples</h5>
+    <ul>
+      <li id="">A button that displays the Time <button class="btn btn-primary" onclick="document.getElementById('demo').innerHTML = Date()">The time is?</button></li>
+      <li id="demo"></li>
+      <li>
+        <dl>
+          <dt>Full Reference is located via</dt>
+          <dd><a target="_blank" class="btn btn-primary" href="https://www.w3schools.com/jsref/dom_obj_event.asp">
+            HTML DOM Events
+          </a></dd>
+          <dt>onChange</dt>
+          <dd>An HTML Element has been changed</dd>
+          <dt>onCLick</dt>
+          <dd>The user clicks an HTML element</dd>
+          <dt>onMouseOver</dt>
+          <dd>The user moves the mouse over an HTML element</dd>
+          <dt>onMouseOut</dt>
+          <dd>The user moves the mouse away from an HTML element</dd>
+          <dt>onKeyDown</dt>
+          <dd>the user pushes a keyboard  key</dd>
+          <dt>onload</dt>
+          <dd>the browser has finished loading the page</dd>
+        </dl>
+      </li>
+    </ul>
+    <h5>Displaying strings length</h5>
+    <a target="_blank" href="https://www.w3schools.com/jsref/jsref_obj_string.asp" class="btn btn-primary">
+      <a target="_blank" href="https://www.w3schools.com/js/js_string_methods.asp" class="btn btn-primary">
+        String Methods
+      </a>
+      Link to string Reference
+    </a>
+    <ul id="stringList">
+    </ul>
+    <h5 class="display-4">Class Constructor Samples</h5>
+    <!-- Horizontal under breakpoint -->
+    <div class="col">
+      <ul id="dogList" class="list-group list-group-horizontal">
+
+      </ul>
+    </div>
+    <div class="col">
+      inp
+    </div>
+  </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="helloworld.js"></script>
+<script src="strings.js"></script>
+<script src="classes.js"></script>
+<script src="bubblesort.js"></script>
+<script src="selectionsort.js"></script>
+
+</html>
