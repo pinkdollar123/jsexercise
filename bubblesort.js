@@ -28,5 +28,7 @@ function bubbleSort(array){
   }
   
   const mixNumbers = [ 9, 7, 2, 4, 5, 10, 1, 15, 4, 2, 3,];
-  
+  const newNumbers = [13,32,26,35,10]
   console.log(bubbleSort(mixNumbers));
+
+  console.log(bubbleSort(newNumbers))
