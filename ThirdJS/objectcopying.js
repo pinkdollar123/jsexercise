@@ -60,6 +60,7 @@ car = {
 * JSON.parse converts JSON string into an Object
 * JSON.stringify converts a JSON to string
 * This can't be used in order to create copies of objects where the attributes values are functions
+* JSON.parse gives a brand new object initialized from out of the string
  */
 hisCar = JSON.parse(JSON.stringify(car));
 
