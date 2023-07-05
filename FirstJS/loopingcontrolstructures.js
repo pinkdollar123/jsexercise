@@ -84,3 +84,23 @@ for (let i = 3; i <= count; i++){
 }
 
 console.log(45/0)
+
+let phrase = "to err is human";
+
+let wordsInPhrase = phrase.split(" ");
+
+let longest = 0;
+
+let longestWord = "";
+
+for(let i=0; i< wordsInPhrase.length; i++){
+    if(wordsInPhrase[i].length > longest){
+        longest = wordsInPhrase[i].length;
+        longestWord = wordsInPhrase[i];
+    }    
+}
+
+let longestSquared = Math.pow(longest, 2);
+
+document.getElementById("largestWord").innerHTML = longestWord + " has " + longest + " letters";
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOrms js</title>
+</head>
+<body bgcolor="#d3d3d3">
+    <h2>HTML forms</h2>
+
+    <form action="forms.html" onsubmit="return validateForm()" name="myForm">
+    <h3>Registration Form</h3>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="" id="unameLabel" style="color: red; visibility: hidden;">Username should have minimum of 6 characters</label>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br><br>
+        
+        <label>Residency:</label>
+        <input type="radio" id="resident" name="residency" value="resident" required>
+        <label for="resident">Resident</label>
+        <input type="radio" id="non-resident" name="residency" value="non-resident" required>
+        <label for="non-resident">Non-Resident</label><br><br>
+      
+        <label>Account Selection:</label>
+        <input type="checkbox" id="savings" name="account" value="savings">
+        <label for="savings">Savings</label>
+        <input type="checkbox" id="checking" name="account" value="checking">
+        <label for="checking">Checking</label>
+        <input type="checkbox" id="money-market" name="account" value="money-market">
+        <label for="money-market">Money Market</label><br><br>
+      
+        <label for="nationality">Nationality:</label>
+        <select id="nationality" name="nationality" required>
+          <option value="">Select</option>
+          <option value="Australia">Philippines</option>
+          <option value="Canada">Canada</option>
+          <option value="Germany">Germany</option>
+          <option value="India">India</option>
+          <option value="Kenya">Kenya</option>
+          <option value="USA">USA</option>
+        </select><br><br>
+      
+        <input type="submit" name="forms" value="Submit">
+        <input type="reset" name="forms" value="Reset">
+
+    </form>
+
+    <script src="forms.js"></script>
+</body>
+</html>

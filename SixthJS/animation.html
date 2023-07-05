@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+</head>
+
+<style>
+    #square {
+      width: 500px;
+      height: 500px;
+      position: relative;
+      background: yellow;
+    }
+    
+    #circle {
+      width: 30px;
+      height: 50px;
+      position: absolute;
+      background-color: red;
+      border-radius: 50%;
+      top: 450px;
+    }
+  </style>
+
+
+<body>
+    <h2>Animation</h2>
+
+
+    <div id="square">
+        <div id="circle"></div>
+      </div>
+
+   <p> <button type="button" onclick="animation()">Move!</button></p>
+    <script src="animation.js"></script>
+</body>
+</html>
