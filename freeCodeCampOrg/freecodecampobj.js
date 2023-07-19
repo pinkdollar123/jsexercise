@@ -197,3 +197,24 @@ function multiplyAll(arr) {
 }
 
 multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
+
+// Setup
+const myArrayNew = [];
+let i = 10;
+
+// Only change code below this line
+do{
+  myArrayNew.push(i);
+  i++;
+}while(i === 10);
+
+// recursion of array
+function sum(arr, n) {
+  // Only change code below this line
+ if (n <= 0){
+   return 0;
+ }else {
+   return sum(arr, n -1) + arr[n -1];
+ }
+  // Only change code above this line
+}
