@@ -102,3 +102,11 @@ const HIGH_TEMPERATURES = {
 const {today , tomorrow} = HIGH_TEMPERATURES;
 
 // Only change code above this line
+
+// DESTRUCTURING AND REASSIGNING NEW VARIABLE NAMES AFTER A COLON OF THE EXISTING VARIABLE PROPERTY NAME
+
+// Only change code below this line
+
+const {today: highToday , tomorrow: highTomorrow} = HIGH_TEMPERATURES;
+
+// Only change code above this line
