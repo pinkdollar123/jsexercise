@@ -189,12 +189,13 @@ const failuresList = makeList(result.failure);
 const createPerson = (name, age, gender) => {
   // Only change code below this line
   return {
-    name: name,
-    age: age,
-    gender: gender
+    name,
+    age,
+    gender
   };
   // Only change code above this line
 };
+
 //* In the provided syntax, ({}) is used after the arrow function definition to implicitly return an object literal from the function. 
 // * It is a shorthand notation to create an object with properties directly from variables with matching names.
 
@@ -206,4 +207,16 @@ const person = createPerson('John', 30, 'Male');
 console.log(person);  //{ name: 'John', age: 30, gender: 'Male' }
 
 // ? This concise syntax is often used in JavaScript to create simple functions that return object literals.
+
+// *CONCISE DECLARATIVE  FUNCTIONS WITH ES6
+// Only change code below this line
+const bicycle = {
+  gear: 2,
+  setGear(newGear) {
+    this.gear = newGear;
+  }
+};
+// Only change code above this line
+bicycle.setGear(3);
+console.log(bicycle.gear);
 
