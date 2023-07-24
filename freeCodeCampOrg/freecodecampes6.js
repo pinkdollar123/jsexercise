@@ -121,7 +121,7 @@ const LOCAL_FORECAST = {
 
 // Only change code below this line
   
-const {today: {low: lowToday, high: highToday}} = LOCAL_FORECAST;
+const {today: {low: lowToday, high: highToday2}} = LOCAL_FORECAST;
 
 // Only change code above this line
 
@@ -183,3 +183,27 @@ function makeList(arr) {
 }
 
 const failuresList = makeList(result.failure);
+
+// *The purpose of wrapping the object literal in parentheses ({}) is to ensure that it is treated as an expression rather than a block statement. 
+
+const createPerson = (name, age, gender) => {
+  // Only change code below this line
+  return {
+    name: name,
+    age: age,
+    gender: gender
+  };
+  // Only change code above this line
+};
+//* In the provided syntax, ({}) is used after the arrow function definition to implicitly return an object literal from the function. 
+// * It is a shorthand notation to create an object with properties directly from variables with matching names.
+
+createPerson = (name, age , gender ) => ({name, age, gender});
+
+const person = createPerson('John', 30, 'Male');
+
+// *it will produce 
+console.log(person);  //{ name: 'John', age: 30, gender: 'Male' }
+
+// ? This concise syntax is often used in JavaScript to create simple functions that return object literals.
+
