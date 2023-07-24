@@ -124,3 +124,16 @@ const LOCAL_FORECAST = {
 const {today: {low: lowToday, high: highToday}} = LOCAL_FORECAST;
 
 // Only change code above this line
+
+let a = 8, b = 6;
+
+// Only change code below this line
+// Use destructuring assignment to swap the values of a and b so that a receives the value stored in b, and b receives the value stored in a.
+[a, b] = [8, 6];
+
+[b, a] = [a, b];
+
+// The variable a is assigned the first value of the array, and b is assigned the second value of the array. We can also access the value at any index in an array with destructuring by using commas to reach the desired index:
+
+const [d, e,,, f] = [1, 2, 3, 4, 5, 6];
+console.log(d, e, f);
