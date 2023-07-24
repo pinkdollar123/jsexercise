@@ -66,4 +66,16 @@ const myConcat = (arr1, arr2) => {
   
   console.log(myConcat([1, 2], [3, 4, 5]));
   
-  
+  // rest parameter as argument in a function
+const sum = (...args) => {
+  let total = 0;
+  for (let i = 0; i < args.length; i++) {
+    total += args[i];
+  }
+  return total;
+}
+
+// assigning default value for value if value was undefined or 0
+// Only change code below this line
+const increment = (number, value = 1) => number + value;
+// Only change code above this line
