@@ -4,7 +4,25 @@
 
 let myString = "Hello, World!";
 let myRegex = /Hello/;
-myRegex.test(myString) // Change this line
+let result = myRegex.test(myString); // Change this line
 
-console.log(myRegex);
+console.log(result);
 
+// * Waldo is being searched below, now waldo and WaLDo or any other WALDO is not equal to Waldo itself, this means it will return false this is called string literal
+let waldoIsHiding = "Somewhere Waldo is hiding in this text.";
+let waldoRegex = /Waldo/; // Change this line
+let result2 = waldoRegex.test(waldoIsHiding);
+
+console.log(result2);
+
+// ? using OR operator | you can pass multiple checks when matching a string, multiple patterns is possible
+
+let petString = "James has a pet cat.";
+let petRegex = /dog|cat|bird|fish/; // Change this line
+let result3 = petRegex.test(petString);
+
+console.log(result3);
+let petString2 = "Emma has a pet fish";
+console.log(petString2);
+petString2 = "Emma has a pet rock";
+console.log(petString2);
