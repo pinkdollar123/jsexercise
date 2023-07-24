@@ -220,3 +220,22 @@ const bicycle = {
 bicycle.setGear(3);
 console.log(bicycle.gear);
 
+// Only change code below this line
+class Vegetable {
+  constructor(name){
+    this.name = name;
+  }
+
+  cutVegetable(){
+    console.log(`The ${this.name} was cut`);
+  }
+}
+// Only change code above this line
+
+// a new object instance of Vegetable class named carrot
+const carrot = new Vegetable('carrot');
+console.log(carrot.name); // Should display 'carrot'
+
+// * invoked by an Object.classFunction()
+carrot.cutVegetable();
+
