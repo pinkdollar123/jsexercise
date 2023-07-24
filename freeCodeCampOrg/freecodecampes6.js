@@ -239,3 +239,49 @@ console.log(carrot.name); // Should display 'carrot'
 // * invoked by an Object.classFunction()
 carrot.cutVegetable();
 
+// * using getter and setter to control access to an object and redefining it using the same variable with a different value
+
+// Only change code below this line
+class Thermostat{
+  constructor(f){
+    this.f = f;
+  }
+
+  // getter
+  get temperature(){
+    return  (5 / 9) * (this.f - 32);
+  }
+  // setter
+  set temperature(c){
+   return this.f = (c * 9.0) / 5 + 32;
+  }
+}
+// Only change code above this line
+
+// Only change code below this line
+class Thermostat{
+  constructor(f){
+    this.f = f;
+  }
+
+  // getter
+  get temperature(){
+    return  (5 / 9) * (this.f - 32);
+  }
+  // setter
+  set temperature(c){
+   return this.f = (c * 9.0) / 5 + 32;
+  }
+}
+// Only change code above this line
+
+const thermos = new Thermostat(76); // Setting in Fahrenheit scale
+console.log(`Starting Farenheit of ${thermos.f}`);
+let temp = thermos.temperature; // 24.44 in Celsius
+console.log(`The calculated value from a getter function and the current value of ${thermos.f} Farenheit converted to Celcius and rounded to Math.floor is '${Math.floor(temp)}' Celcius`);
+thermos.temperature = 26;
+console.log(`The above statement sets a new value for the thermos temperature and accepts a parameter of celcius of 26 converted to ${thermos.f} Farenheit`);
+temp = thermos.temperature; // 26 in Celsius
+console.log(`Now once the existing variable 'temp' is redeclared it will use the getter function to set the current Farenheit above to ${temp}`);
+
+
