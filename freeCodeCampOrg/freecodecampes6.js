@@ -284,4 +284,31 @@ console.log(`The above statement sets a new value for the thermos temperature an
 temp = thermos.temperature; // 26 in Celsius
 console.log(`Now once the existing variable 'temp' is redeclared it will use the getter function to set the current Farenheit above to ${temp}`);
 
+// *use export to share a code block
 
+const uppercaseString = (string) => {
+  return string.toUpperCase();
+}
+
+const lowercaseString = (string) => {
+  return string.toLowerCase()
+}
+
+export { uppercaseString, lowercaseString };
+
+
+// * Export default without using let, var, const and only returning a single value
+
+
+export default function subtract(x, y) {
+  return x - y;
+}
+
+
+// ? IMPORTS import * from 'file location' = imports all content of the module, import { content1, content 2, ...} from 'file location';
+import subtract from './math_functions.js';  
+// Only change code above this line
+
+subtract(7,4);
+
+// * Promise
