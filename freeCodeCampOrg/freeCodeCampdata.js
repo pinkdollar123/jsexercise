@@ -47,5 +47,20 @@ function htmlColorNames(arr) {
   
   console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
 
+
+//   * slice method arr.slice(), copies or extracts a given number of elements to a new array, leaving the array it is called upon untouched. slice() takes only 2 parameters slice() takes only 2 parameters first index is the start of extraction and the second parameter is the end or stop of extraction leaving the covered elements are the new array set.
+
+function forecast(arr) {
+    // Only change code below this line
+    let newArr = arr.slice(2,4);
+    return newArr;
+  }
   
+  // Only change code above this line
+  console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
+
+  
+
+
+
 
