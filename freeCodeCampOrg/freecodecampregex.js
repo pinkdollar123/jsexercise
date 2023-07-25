@@ -26,3 +26,34 @@ let petString2 = "Emma has a pet fish";
 console.log(petString2);
 petString2 = "Emma has a pet rock";
 console.log(petString2);
+
+// *You can match both cases using what is called a flag. There are other flags but here you'll focus on the flag that ignores case - the i flag. You can use it by appending it to the regex. An example of using this flag is /ignorecase/i. This regex can match the strings ignorecase, igNoreCase, and IgnoreCase.
+
+let carString = "John's car is Rock"
+let carRegex = /Toyota|honda|Mitsubishi/i;
+let carResult = carRegex.test(carString);
+console.log(carResult);
+carString = "James car is toYota";
+carResult = carRegex.test(carString);
+console.log(carResult)
+
+// *You can also extract the actual matches you found with the .match() method. To use the .match() method, apply the method on a string and pass in the regex inside the parentheses.
+
+let carPull = carString.match(carRegex);
+console.log(carPull);
+let extractStr = "Extract the word 'coding' from this string.";
+let codingRegex = /coding/; // Change this line
+let result4 = extractStr.match(codingRegex); // Change this line
+console.log(result4);
+
+// * multiple regex conditon using global = g and i=ignorecase finding multiple values on the given string matching it using global
+let twinkleStar = "Twinkle, twinkle, little star";
+let starRegex = /Twinkle/gi; // Change this line
+let result5 = twinkleStar.match(starRegex); // Change this line
+
+// * Match Anything with Wildcard Period dot . For example, if you wanted to match hug, huh, hut, and hum, you can use the regex /hu./ to match all four words.
+
+let exampleStr = "Let's have fun with regular expressions!";
+let unRegex = /.un/; // Change this line
+let result6 = unRegex.test(exampleStr);
+console.log(result6);
