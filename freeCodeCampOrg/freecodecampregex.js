@@ -272,3 +272,16 @@ multipleA.test(A100);
 let haStr = "Hazzzzah";
 let haRegex = /haz{4,}ah/i; // Change this line added i flag to enable ignorecase for the string
 let resulthaz = haRegex.test(haStr);
+
+// * Specify Exact Number of Matches To specify a certain number of patterns, just have that one number between the curly brackets.
+
+// ? For example, to match only the word hah with the letter a 3 times, your regex would be /ha{3}h/.
+
+// ! Change the regex timRegex to match the word Timber only when it has four letter m's.
+
+let timStr = "Timmmmber";
+let timRegex = /Tim{4}ber/; // Change this line
+let resulttim = timRegex.test(timStr);
+
+// * Check for All or None
+
