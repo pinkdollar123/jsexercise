@@ -34,3 +34,18 @@ arr.splice(2,2);
 // Only change code above this line
 console.log(arr);
 
+// * splice with third parameter, splice third parameter accepts a new element to be added to the modified array
+
+function htmlColorNames(arr) {
+    // Only change code below this line
+    let darkSalmon = "DarkSalmon";
+    let blancedAlmond = "BlanchedAlmond";
+  arr.splice(0,2, darkSalmon, blancedAlmond);
+    // Only change code above this line
+    return arr;
+  }
+  
+  console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
+
+  
+
