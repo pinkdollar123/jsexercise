@@ -120,4 +120,22 @@ let chewieRegex = /Aa*/; // Change this line
 
 let result9 = chewieQuote.match(chewieRegex);
 
+//?  Lazy matching using ? flags used dot . for all and * zero to any and ? for lazy matching
+
+let text = "<h1>Winter is coming</h1>";
+let myRegextest = /<.*?>/; // Change this line
+let resulttest = text.match(myRegextest);
+
+// using caret ^  the caret is used to search for patterns at the beginning of strings. 
+
+let firstString = "Ricky is first and can be found.";
+let firstRegex = /^Ricky/;
+firstRegex.test(firstString);
+let notFirst = "You can't find Ricky now.";
+firstRegex.test(notFirst);
+
+
+let rickyAndCal = "Cal and Ricky both like racing.";
+let calRegex = /^Cal/; // Change this line
+let resultcal = calRegex.test(rickyAndCal);
 
