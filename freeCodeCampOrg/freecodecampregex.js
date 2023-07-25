@@ -98,7 +98,12 @@ let jennyStr = "Jenny8675309";
 let jRegex = /[a-z0-9]/ig;
 jennyStr.match(jRegex);
 
-// *q
+// *you could also create a set of characters that you do not want to match. These types of character sets are called negated character sets.
+// ?To create a negated character set, you place a caret character (^) after the opening bracket and before the characters you do not want to match.
+
+let newquoteSample = "3 blind mice.";
+let newmyRegex = /[^aeiou0-9]/ig; // Change this line
+let newresult = quoteSample.match(myRegex); // Change this line
 
 
 
