@@ -316,3 +316,31 @@ noquit.match(qRegex);
 let sampleWord = "astronaut";
 let pwRegex = /(?=\w{6})(?=\w*\d{2})/; // Change this line
 let result10 = pwRegex.test(sampleWord);
+
+// * Check For Mixed Grouping of Characters
+
+// If you want to find either Penguin or Pumpkin in a string, you can use the following Regular Expression: /P(engu|umpk)in/g
+
+// Then check whether the desired string groups are in the test string by using the test() method.
+
+let testStr = "Pumpkin";
+let testRegex = /P(engu|umpk)in/;
+testRegex.test(testStr);
+
+
+// Exactly, you've got it right! In regular expressions, the backslash \ is used to indicate that the following character should be treated as a literal character and not as a special metacharacter.
+
+// For example:
+
+//     \. will match a literal period/dot character.
+//     \* will match a literal asterisk character.
+//     \( will match a literal opening parenthesis character.
+
+
+// ! Fix the regex so that it checks for the names of Franklin Roosevelt or Eleanor Roosevelt in a case sensitive manner and it should make concessions for middle names. Then fix the code so that the regex that you have created is checked against myString and either true or false is returned depending on whether the regex matches.
+
+let newmyString = "Eleanor Roosevelt";
+let newmyRegex2 = /(Franklin|Eleanor) (([A-Z]\.?|[A-Z][a-z]+) )?Roosevelt/; // Change this line
+let newresult2 = newmyRegex2.test(newmyString); // Change this line
+// After passing the challenge experiment with myString and see how the grouping works
+
