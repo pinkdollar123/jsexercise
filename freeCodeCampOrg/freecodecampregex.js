@@ -376,3 +376,25 @@ let resultfix = str.replace(fixRegex, replaceText);
 let hello = "   Hello, World!  ";
 let wsRegex = /^\s+|\s+$/g; // Change this line
 let resulthello = hello.replace(wsRegex, ""); // Change this line
+
+
+// * catch off by one errors or known as OBOE off by one errors crop up when you're trying to target a specific index of a string or array (to slice or access a segment), or when looping over the indices of them. JavaScript indexing starts at zero, not one, which means the last index is always one less than the length of the item. If you try to access an index equal to the length, the program may throw an "index out of range" reference error or print undefined.
+
+function countToFive() {
+    let firstFive = "12345";
+    let len = firstFive.length;
+    // Only change code below this line
+    for (let i = 0; i < len; i++) {
+    // Only change code above this line
+      console.log(firstFive[i]);
+    }
+  }
+  
+  countToFive();
+  
+  let alphabet = "abcdefghijklmnopqrstuvwxyz";
+  let len = alphabet.length;
+  
+  for (let k = 0; k < len; k++) {
+    console.log(alphabet[k]);
+  }
