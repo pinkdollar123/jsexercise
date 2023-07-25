@@ -421,4 +421,13 @@ function zeroArray(m, n) {
   
   let matrix = zeroArray(3, 2);
   console.log(matrix);
-  
+
+//   * Preventing infinite loop by using the correct conditional operator in a for loop or any loops
+
+function myFunc() {
+    for (let i = 1; i <= 4; i += 2) {
+      console.log(i);
+      console.log("Still going!");
+      console.log(`The current value of ${i}`);
+    }
+  }
