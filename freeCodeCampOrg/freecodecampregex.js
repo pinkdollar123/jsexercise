@@ -139,3 +139,33 @@ let rickyAndCal = "Cal and Ricky both like racing.";
 let calRegex = /^Cal/; // Change this line
 let resultcal = calRegex.test(rickyAndCal);
 
+// ? Match ending string pattern You can search the end of strings using the dollar sign character $ at the end of the regex.
+
+let theEnding = "This is a never ending story";
+let storyRegex = /story$/;
+storyRegex.test(theEnding);
+let noEnding = "Sometimes a story will have to end";
+storyRegex.test(noEnding);
+
+// * Match all letters and numbers The closest character class in JavaScript to match the alphabet is \w This character class matches upper and lowercase letters plus numbers. Note, this character class also includes the underscore character (_).
+
+let longHand = /[A-Za-z0-9_]+/;
+let shortHand = /\w+/;
+let numbers = "42";
+let varNames = "important_var";
+let shortHandGlobal = /\w/g;
+longHand.test(numbers);
+shortHand.test(numbers);
+longHand.test(varNames);
+shortHand.test(varNames);
+
+// * Match Everything But Letters and Numbers You can search for the opposite of the \w with \W. Note, the opposite pattern uses a capital letter. This shortcut is the same as [^A-Za-z0-9_].
+
+ shortHand = /\W/;
+ numbers = "42%";
+ sentence = "Coding!";
+numbers.match(shortHand);
+sentence.match(shortHand);
+
+
+
