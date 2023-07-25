@@ -105,5 +105,12 @@ let newquoteSample = "3 blind mice.";
 let newmyRegex = /[^aeiou0-9]/ig; // Change this line
 let newresult = quoteSample.match(myRegex); // Change this line
 
+// * finding the character that appears one more time or in a row using the plus operator + as an example: /char+/g;
+
+let difficultSpelling = "Mississippi";
+let myRegexnew = /s+/g; // Change this line
+let resultnew = difficultSpelling.match(myRegex);
+
+
 
 
