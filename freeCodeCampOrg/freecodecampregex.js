@@ -78,3 +78,27 @@ let quoteSample = "Beware of bugs in the above code; I have only proved it corre
 let vowelRegex = /[aeiou]/gi; // Change this line
 let result7 = quoteSample.match(vowelRegex); // Change this line
 
+// *Inside a character set, you can define a range of characters to match using a hyphen character: -. For example, to match lowercase letters a through e you would use [a-e].
+
+let catStr = "cat";
+let batStr = "bat";
+let matStr = "mat";
+let newRegex = /[a-e]at/;
+catStr.match(newRegex);
+batStr.match(newRegex);
+matStr.match(newRegex);
+
+let quoteSample2 = "The quick brown fox jumps over the lazy dog.";
+let alphabetRegex = /[a-z]/gi; // Change this line
+let result8 = quoteSample2.match(alphabetRegex); // Change this line
+
+// ?Using the hyphen (-) to match a range of characters is not limited to letters. It also works to match a range of numbers. Also, it is possible to combine a range of letters and numbers in a single character set.
+
+let jennyStr = "Jenny8675309";
+let jRegex = /[a-z0-9]/ig;
+jennyStr.match(jRegex);
+
+// *q
+
+
+
