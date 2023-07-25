@@ -344,3 +344,12 @@ let newmyRegex2 = /(Franklin|Eleanor) (([A-Z]\.?|[A-Z][a-z]+) )?Roosevelt/; // C
 let newresult2 = newmyRegex2.test(newmyString); // Change this line
 // After passing the challenge experiment with myString and see how the grouping works
 
+// * Reuse Patterns Using Capture Groups Say you want to match a word that occurs multiple times like below. 
+
+// The substring matched by the group is saved to a temporary "variable", which can be accessed within the same regex using a backslash and the number of the capture group (e.g. \1). Capture groups are automatically numbered by the position of their opening parentheses (left to right), starting at 1.
+
+// The example below matches a word that occurs thrice separated by spaces:
+
+let repeatRegex = /(\w+) \1 \1/;
+repeatRegex.test(repeatStr); // Returns true
+repeatStr.match(repeatRegex); // Returns ["row row row", "row"]
