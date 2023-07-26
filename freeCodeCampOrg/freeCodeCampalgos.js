@@ -51,31 +51,49 @@ function findLongestWordLength(str) {
 
 //   Find the largest numbers in arrays
 
-// * Procedural approach
 function largestOfFour(arr) {
-    const results = [];
-    for (let i = 0; i < arr.length; i++) {
-      let largestNumber = arr[i][0];
-      for (let j = 1; j < arr[i].length; j++) {
-        if (arr[i][j] > largestNumber) {
-          largestNumber = arr[i][j];
-        }
+  // we declare a variable to hold the largestNumbers in arrays of subArray
+  const results = [];
+
+// we then iterate each array usign for loop by using the array[i]/index
+  for(let i = 0 ; i <arr.length; i++){
+
+    // we declare a new variable for a temporary container of the largest number array[index][element position]
+    let largestNumber = arr[i][0];
+
+    // here we use another forloop inner loop, as a reference to be compared to the value of element inside the subarray which will run to the length of element
+
+    for(let j = 1; j < arr[i].length; j++){
+
+// this is the codeblock to be executed to compare if the array at i index [ element position] is greater than the reference value at the top largestNumber,if yes it will store the new data to the holder, else nothing will happen
+      if(arr[i][j] > largestNumber){
+        largestNumber = arr[i][j];
       }
-      results[i] = largestNumber;
     }
-  
-    return results;
+    // once the innerloop is completed, the outer executes the current container results at 0 index or results[0] will have a value of the largestNumber found at the first loop;
+    results[i]= largestNumber;
   }
+  return results;
+}
 
-//   Code Explanation freecodecamp community
+largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
 
-//     Create a variable to store the results as an array.
-//     Create an outer loop to iterate through the outer array.
-//     Create a second variable to hold the largest number and initialise it with the first number. This must be outside an inner loop so it won’t be reassigned until we find a larger number.
-//     Create said inner loop to work with the sub-arrays.
-//     Check if the element of the sub array is larger than the currently stored largest number. If so, then update the number in the variable.
-//     After the inner loop, save the largest number in the corresponding position inside of the results array.
-//     And finally return said array.
+let arr = [ [4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1] ]
+
+
+let large = arr[0][0];
+console.log(large);
+
+let j = 1;
+
+if(arr[0][1] > large){
+  large = arr[0][1];
+  console.log(true);
+}else{
+  console.log(false);
+}
+
+
 
 
 //   *Declarative approach
