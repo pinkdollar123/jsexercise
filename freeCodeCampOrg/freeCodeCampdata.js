@@ -74,6 +74,27 @@ function copyMachine(arr, num) {
   
   console.log(copyMachine([true, false, true], 2));
 
+// * indexOf to check if an array consist an element of the array or checker, arr.indexOf(element), function arrChecker(arr, element){ code block }
+
+function quickCheck(arr, elem) {
+  // Only change code below this line
+  if(arr.indexOf(elem) >= 0){
+    return true;
+  }else{
+    return false;
+  }
+  // Only change code above this line
+}
+
+console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
+
+// ternaryusage
+function quickChecker(arr,elem){
+  return arr.indexOf(elem) >= 0 ? true: false;
+}
+
+console.log(quickChecker(['squash','onions','shallots','mushrooms'],'onions'));
+
 
 
 
