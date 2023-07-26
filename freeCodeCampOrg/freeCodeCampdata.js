@@ -156,5 +156,24 @@ userActivity.data.online = 45;
 
 console.log(userActivity);
 
+// * checking an object if there's an item or property inside that object
+
+let foods = {
+  apples: 25,
+  oranges: 32,
+  plums: 28,
+  bananas: 13,
+  grapes: 35,
+  strawberries: 27
+};
+
+function checkInventory(scannedItem) {
+  // Only change code below this line
+  let newfoods = foods[scannedItem];
+  return newfoods;
+  // Only change code above this line
+}
+
+console.log(checkInventory("apples"));
 
 
