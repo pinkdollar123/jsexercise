@@ -104,3 +104,31 @@ function largestOfFour(arr) {
       });
     });
   }
+
+// * Finding the ending of the string if equal 
+
+// First we use the slice method copy the string.
+// In order to get the last characters in str equivalent to the target's length we use the slice method.
+// The first parameter inside the slice method is the starting index and the second parameter would be the ending index.
+// In this case we only include one parameter which it will copy everything from the starting index.
+// We substract the length of str and the length of target, that way, we shall get the last remaining characters equivalent to the target's length.
+// Finally we compare the return result of slice to target and check if they have the same characters.
+
+  function confirmEnding(str, target) {
+    return str.slice(str.length - target.length) === target;
+  }
+  
+  confirmEnding("Bastian", "n");
+  
+  let zos = "zos is a great pretender";
+  let target = "pretender"
+  // str.slice(str.length - target.length) === target;
+  let zlen = zos.length;
+  console.log(zlen);
+  let tlen = target.length
+  console.log(tlen);
+  console.log(24-9);
+  let holder = zos.slice(zos.length - target.length)
+  console.log(holder === target);
+  console.log(zos.slice(15));
+  
