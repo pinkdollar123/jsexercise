@@ -95,6 +95,22 @@ function quickChecker(arr,elem){
 
 console.log(quickChecker(['squash','onions','shallots','mushrooms'],'onions'));
 
+// * using indexOf and array[i] indexes to check if the element matching is not locatedi inside an array, if not match then it will push the array that doesn't have the matching element.
+
+function filteredArray(arr, elem) {
+  let newArr = [];
+  // Only change code below this line
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i].indexOf(elem) == -1){
+      newArr.push(arr[i]);
+    }
+  }
+  // Only change code above this line
+  return newArr;
+}
+
+console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3));
+
 
 
 
