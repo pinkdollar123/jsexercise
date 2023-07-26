@@ -228,3 +228,33 @@ function isEveryoneHere(userObj) {
 
 
 console.log(isEveryoneHere(users));
+
+// * counting all the true count of an object property.
+
+const usersNew = {
+  Alan: {
+    online: false
+  },
+  Jeff: {
+    online: true
+  },
+  Sarah: {
+    online: false
+  }
+}
+
+function countOnline(allUsers) {
+  // Only change code below this line
+  let onlineCount = 0;
+
+  for(const user in allUsers){
+    if(allUsers[user].online === true){
+      onlineCount++;
+    }
+  }
+  return onlineCount;
+  // Only change code above this line
+}
+
+console.log(countOnline(usersNew));
+
