@@ -195,4 +195,36 @@ delete foods['strawberries'];
 
 console.log(foods);
 
+// * Using hasOwnProperty() in objects or 'propertyname' in Objectname, objectname.hasOwnProperty()
 
+let users = {
+  Alan: {
+    age: 27,
+    online: true
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: true
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
+
+function isEveryoneHere(userObj) {
+  return ["Alan", "Jeff", "Sarah", "Ryan"].every(name =>
+    userObj.hasOwnProperty(name)
+  );
+}
+
+// Uses an array with all of the names which should be present in the object.
+// The every method is used to validate all of names used in conjunction with the hasOwnProperty method result in a value of true being returned during each iteration.
+// If at least one name is not found using the hasOwnProperty method, the every method returns false.
+
+
+console.log(isEveryoneHere(users));
