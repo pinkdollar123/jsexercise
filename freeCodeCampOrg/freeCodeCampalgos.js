@@ -283,6 +283,27 @@ function truncateString(str, num) {
   // twotwo.splice(num, pos, twoarr[0][1]);
   // console.log(twotwo);
 
+  function bouncer(arr) {
+
+    let stock = [];
+  
+    for(let i = 0; i < arr.length; i++){
+      if(arr[i]){
+        stock.push(arr[i]);
+      }
+    }
+    return stock;
+  }
+  
+  bouncer([7, "ate", "", false, 9]);
+  
+  console.log();
+  
+  // another approach
+  function bouncer2(arr) {
+    return arr.filter(Boolean);
+  }
+
   
 
   
