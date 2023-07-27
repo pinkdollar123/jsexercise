@@ -154,3 +154,10 @@ function largestOfFour(arr) {
   // Finally, we are using our regular expression with the test method to the given string, to check if the string ends with the pattern and return true or false accordingly.
 
   
+  function confirmEnding(str, target) {
+    return str.slice(-target.length) === target
+  }
+  
+  confirmEnding("Bastian", "n");
+
+  // another approach is this one using -string.length to match the target value If a negative number is provided as the first parameter to slice() , the offset is taken backwards from the end of the string.
