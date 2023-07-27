@@ -181,3 +181,20 @@ let test = "me";
 test += "me"
 
 console.log(test);
+
+// * truncateString by accepting the num as argument to match either it's less than or greather and equal it will return based on the condition
+function truncateString(str, num) {
+  // *Ternary operator by me
+  return num < str.length ? str.slice(0,num)+"..." : str.slice();
+  
+  // *procedural condition
+  //   if(num < str.length){
+  //   return str.slice(0,num)+"...";
+  // }else{
+  //   return str.slice();
+  // }
+  
+  }
+  truncateString("A-tisket a-tasket A green and yellow basket", 8);
+  
+  
