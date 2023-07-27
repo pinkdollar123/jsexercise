@@ -376,3 +376,20 @@ function truncateString(str, num) {
     const regex = new RegExp(`[^${elem1}]`, 'i');
     return !regex.test(elem2);
   }
+
+  // *Chunk Monkeys
+
+  function chunkArrayInGroups(arr, size) {
+    // Break it up.
+    const newArr = [];
+    let i = 0;
+  
+    while (i < arr.length) {
+      newArr.push(arr.slice(i, i + size));
+      i += size;
+    }
+    return newArr;
+  }
+  chunkArrayInGroups(["a", "b", "c", "d"], 2);
+
+  
