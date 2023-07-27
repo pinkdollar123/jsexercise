@@ -252,5 +252,38 @@ function truncateString(str, num) {
   console.log(splt[1][0]);
   console.log(splt[1][0].toUpperCase());
 
+  // *Franken Splice it's alive it's alive
+
+  function frankenSplice(arr1, arr2, n) {
+    let splice2 = arr2.slice();
+    console.log(`initial of splice2 ${splice2}`);
+    console.log(`initial of n is ${n}`);
+  
+    for(let i = 0; i < arr1.length; i++){
+      
+      console.log(`value of arr1 is '${arr1[i]}'`)
+      splice2.splice(n, 0, arr1[i]);
+      n++;
+  
+      console.log(splice2);
+      console.log(`n=${n} after iteration of ${i+1}`);
+      }
+    return splice2;
+  }
+  
+  frankenSplice([1, 2, 3], [4, 5, 6], 1);
+  
+  // let twoarr = [[1,2,3],[4,5,6]];
+  // let num = 1;
+  // let pos = 0;
+  // let twotwo = twoarr.slice(1);
+  // console.log(twotwo);
+  // twotwo.splice(num, pos, twoarr[0][0]);
+  // console.log(twotwo);
+  // twotwo.splice(num, pos, twoarr[0][1]);
+  // console.log(twotwo);
+
+  
+
   
   
