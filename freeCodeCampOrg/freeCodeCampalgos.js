@@ -304,6 +304,34 @@ function truncateString(str, num) {
     return arr.filter(Boolean);
   }
 
+  function getIndexToIns(arr, num) {
+
+    arr.sort((a, b) => a - b);
+  
+    for(let i = 0; i <arr.length; i++){
+      if(arr[i] >= num) return i;
+    }
+    return arr.length;
+  }
+  
+  getIndexToIns([40, 60], 50);
+  
+  function matcherme(matcher){
+  
+  let arr2 = [1,2,3,4,5];
+  let storage = [];
+  if(arr2[3] > matcher){
+    console.log(arr2[3])
+    storage.push[arr2[3]];
+  }else{
+    console.log(false)
+  }
+  return;
+  }
+  
+  matcherme(3.5);
+  
+  
   
 
   
