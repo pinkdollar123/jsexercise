@@ -229,5 +229,28 @@ function truncateString(str, num) {
   
   booWho(null);
 
+  // *Title Case for every word
+
+  function titleCase(str) {
+    const newTitle = str.split(" ");
+    const updatedTitle = [];
+    for (let st in newTitle) {
+      updatedTitle[st] = newTitle[st][0].toUpperCase() + newTitle[st].slice(1).toLowerCase();
+    }
+    return updatedTitle.join(" ");
+  }
+  
+  titleCase("I'm a little tea pot");
+  
+  let strme = "I'm a little tea pot";
+  let lower = strme.toLowerCase();
+  let splt = lower.split(" ");
+  
+  console.log(splt);
+  console.log(splt.length-1);
+  console.log(splt[0][0]);
+  console.log(splt[1][0]);
+  console.log(splt[1][0].toUpperCase());
+
   
   
