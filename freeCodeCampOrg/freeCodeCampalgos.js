@@ -161,3 +161,23 @@ function largestOfFour(arr) {
   confirmEnding("Bastian", "n");
 
   // another approach is this one using -string.length to match the target value If a negative number is provided as the first parameter to slice() , the offset is taken backwards from the end of the string.
+
+// * concatenating string base on their parameter value
+
+function repeatStringNumTimes(str, num) {
+  // declares a new variable to store the newstring
+  let newStr = "";
+// runs a loop to compare how many times the loop and concatenation will execute based on the comparator
+  for(let i = 0; i < num; i++){
+    // concatenate the str to empty string for how many times with the comparator compared to
+    newStr += str;
+  }
+  return newStr;
+}
+
+repeatStringNumTimes("abc", 3);
+
+let test = "me";
+test += "me"
+
+console.log(test);
