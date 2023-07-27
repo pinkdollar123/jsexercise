@@ -196,5 +196,24 @@ function truncateString(str, num) {
   
   }
   truncateString("A-tisket a-tasket A green and yellow basket", 8);
+
+  // * Truth testing using two parameters checking if the function passes the truth test giving the number from the array
+
+  function findElement(arr, func) {
+
+    let num = 0;
+    
+    for(let i = 0; i < arr.length; i++){
+      // reassigned the value of num to current index value of arr[i];
+      num = arr[i];
+      // func accepts a parameter num as declared in the given context, if this num used becomes true therefore the condition will return the value of the num that passes the truth test
+      if(func(num)){
+        return num;
+      }
+    }
+    return undefined;
+  }
+  
+  findElement([1, 2, 3, 4], num => num % 2 === 0);
   
   
