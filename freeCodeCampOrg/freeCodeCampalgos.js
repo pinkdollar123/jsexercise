@@ -216,4 +216,18 @@ function truncateString(str, num) {
   
   findElement([1, 2, 3, 4], num => num % 2 === 0);
   
+  // * BOO WHO? Finds if the given data is a boolean primitive
+
+  function booWho(bool) {
+
+    if(bool === true || bool === false){
+     return true;
+    }else{
+     return false;
+    }
+  }
+  
+  booWho(null);
+
+  
   
