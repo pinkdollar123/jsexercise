@@ -261,3 +261,41 @@ const ratings = watchList.map(item => ({
 // Only change code above this line
 
 console.log(JSON.stringify(ratings));
+
+// * Implement map on a Prototype
+// remake a map method using forloop or foreach
+
+Array.prototype.myMap = function(callback) {
+  const newArray = [];
+  // Only change code below this line
+  for (let i = 0; i < this.length; i++) {
+    newArray.push(callback(this[i], i, this));
+  }
+  // Only change code above this line
+  return newArray;
+};
+
+Array.prototype.newMap = function(callback) {
+  const newArray = [];
+  // Only change code below this line
+  this.forEach((element, index, originalArr) =>
+    newArray.push(callback(element, index, originalArr))
+  );
+  // Only change code above this line
+  return newArray;
+};
+
+// Only change code below this line
+// * Defined a new variable and used array.map() to pass a new callback function to convert strings to number by locating the objectname["propertyname"]
+
+const filteredList = watchList.filter(props => {
+  return parseFloat(props.imdbRating) >= 8.0;
+}) // using dot notation and method chaining methods can be chained on a new line and make sure not to break it by omitting semicolon; it will still work even it has spaces and for code readability it can be on a new line
+.map(props => ({
+  title: props.Title,
+  rating: props.imdbRating
+}));
+
+// Only change code above this line
+
+console.log(filteredList);
