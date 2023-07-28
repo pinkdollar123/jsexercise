@@ -299,3 +299,34 @@ const filteredList = watchList.filter(props => {
 // Only change code above this line
 
 console.log(filteredList);
+
+// * remake your own array filter prototype
+
+Array.prototype.myFilter = function(callback) {
+  const newArray = [];
+  // Only change code below this line
+    for(let i = 0; i < this.length; i++){
+      if(callback(this[i], i, this) == true){
+        newArray.push(this[i]);
+      }
+    }
+  // Only change code above this line
+  return newArray;
+};
+
+// * Return Part of an Array Using the slice Method
+
+function sliceArray(anim, beginSlice, endSlice) {
+  // Only change code below this line
+
+  // initialize a new var to store the array usign spread operator
+  const newArr = [...anim];
+
+// returns the requested data by using the parameters as arguments passed
+ return newArr.slice(beginSlice, endSlice);
+
+  // Only change code above this line
+}
+
+const inputAnim = ["Cat", "Dog", "Tiger", "Zebra", "Ant"];
+sliceArray(inputAnim, 1, 3);
