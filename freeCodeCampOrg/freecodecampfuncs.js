@@ -330,3 +330,37 @@ function sliceArray(anim, beginSlice, endSlice) {
 
 const inputAnim = ["Cat", "Dog", "Tiger", "Zebra", "Ant"];
 sliceArray(inputAnim, 1, 3);
+
+// * nonmutating array using slice method()
+
+function nonMutatingSplice(cities) {
+
+  const newArr = [...cities];
+// slice method starts at 0 and ends at 3 where the covered is 0, 1 , 2 elements as the covered part.
+  return newArr.slice(0,3); 
+}
+
+// * Combine Two Arrays Using the concat Method
+
+function nonMutatingConcat(original, attach) {
+  // Only change code below this line
+
+  return original.concat(attach);
+
+  // Only change code above this line
+}
+
+const first = [1, 2, 3];
+const second = [4, 5];
+nonMutatingConcat(first, second);
+
+function nonMutatingPush(original, newItem) {
+  // Only change code below this line
+  return original.concat(newItem);
+
+  // Only change code above this line
+}
+
+const first = [1, 2, 3];
+const second = [4, 5];
+nonMutatingPush(first, second);
