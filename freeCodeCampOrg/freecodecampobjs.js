@@ -301,5 +301,29 @@ let penguin = new Penguin();
 console.log(penguin.fly());
 
 
+// *Use Mixin to add common behavior
 
+let bird = {
+    name: "Donald",
+    numLegs: 2
+  };
+  
+  let boat = {
+    name: "Warrior",
+    type: "race-boat"
+  };
+  
+  // Only change code below this line
+  
+  let glideMixin = (gliders) => {
+    gliders.glide = () => {
+      console.log(`I can fly`);
+    }
+  }
+  
+  glideMixin(boat);
+  glideMixin(bird);
+  
+  bird.glide();
+  boat.glide();
 
