@@ -361,6 +361,22 @@ function nonMutatingPush(original, newItem) {
   // Only change code above this line
 }
 
-const first = [1, 2, 3];
-const second = [4, 5];
-nonMutatingPush(first, second);
+const third = [1, 2, 3];
+const fourth = [4, 5];
+nonMutatingPush(third, fourth);
+
+// * reduce method using method chaining
+
+function getRating(watchList) {
+  // Only change code below this line
+  const newArr = 
+  watchList.filter(props => props["Director"] === 'Christopher Nolan')
+  .map(props => parseFloat(props["imdbRating"]))
+  .reduce((avg, addend) => avg + addend) / watchList.filter(tnginamo => tnginamo.Director === "Christopher Nolan").length;
+  
+console.log(newArr);
+  // Only change code above this line
+  return newArr;
+}
+
+console.log(getRating(watchList));
