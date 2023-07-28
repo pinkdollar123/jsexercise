@@ -86,5 +86,57 @@ function Dog(name) {
     }
   }
 
+//   * A more efficient way is to set the prototype to a new object that already contains the properties. This way, the properties are added all at once:
+
+
+function Bird(name){
+    this.name = name;
+}
+
+Bird.prototype = {
+    numLegs: 2, 
+    eat: function() {
+      console.log("nom nom nom");
+    },
+    describe: function() {
+      console.log("My name is " + this.name);
+    }
+  };
+
+  function Dog(name) {
+    this.name = name;
+  }
+  
+  Dog.prototype = {
+    // Only change code below this line
+  
+  };
+  
+  Dog.prototype ={
+    numLegs: 4,
+    eat(){
+      console.log('Chuk chuk chuk');
+    },
+    describe(){
+      console.log(`My name is ${this.name}`);
+    }
+  }
+  
+
+  function Dog(name) {
+    this.name = name;
+  }
+  
+  // Only change code below this line
+  Dog.prototype = {
+    constructor: Dog,
+    numLegs: 4,
+    eat: function() {
+      console.log("nom nom nom");
+    },
+    describe: function() {
+      console.log("My name is " + this.name);
+    }
+  };
 
 
