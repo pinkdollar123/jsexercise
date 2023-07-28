@@ -26,7 +26,7 @@ function Bird(name) {
   }
   
   let canary = new Bird("Tweety");
-  let ownProps = [];
+  let ownProps1 = [];
   // Only change code below this line
   
   for(let props in canary){
@@ -46,7 +46,7 @@ function Dog(name) {
   Dog.prototype.numLegs = 4;
   
   // Only change code above this line
-  let beagle = new Dog("Snoopy");
+  let beagle1 = new Dog("Snoopy");
 
 //   property checker using forloop and hasOwnProperty method
 
@@ -56,7 +56,7 @@ function Dog(name) {
   
   Dog.prototype.numLegs = 4;
   
-  let beagle = new Dog("Snoopy");
+  let beagle3 = new Dog("Snoopy");
   
   let ownProps = [];
   let prototypeProps = [];
@@ -147,7 +147,7 @@ function Dog(name) {
     this.name = name;
   }
   
-  let beagle = new Dog("Snoopy");
+  let beagle4 = new Dog("Snoopy");
   
   // Only change code below this line
   
@@ -159,7 +159,7 @@ function Dog(name) {
     this.name = name;
   }
   
-  let beagle = new Dog("Snoopy");
+  let beagle5 = new Dog("Snoopy");
   
   Dog.prototype.isPrototypeOf(beagle);  // yields true
   
@@ -208,8 +208,8 @@ Animal.prototype = {
 
 // Only change code below this line
 
-let duck = Object.create(Animal.prototype); // Change this line
-let beagle = Object.create(Animal.prototype); // Change this line
+let duck1 = Object.create(Animal.prototype); // Change this line
+let beagle6 = Object.create(Animal.prototype); // Change this line
 
 // * Set the Child's Prototype to an Instance of the Parent
 
@@ -230,4 +230,42 @@ function Dog() { }
 Dog.prototype = Object.create(Animal.prototype);
 let zd = new Dog();
 
+let beagle2 = new Dog();
+
+// *Reset an Inherited Constructor Property
+
+function Animal() { }
+function Bird() { }
+function Dog() { }
+
+Bird.prototype = Object.create(Animal.prototype);
+Dog.prototype = Object.create(Animal.prototype);
+
+// Only change code below this line
+Bird.prototype.constructor = Bird;
+Dog.prototype.constructor = Dog;
+
+
+let duck = new Bird();
+let beagle7 = new Dog();
+
+// Add Methods After Inheritance*
+
+function Animal() { }
+Animal.prototype.eat = function() { console.log("nom nom nom"); };
+
+function Dog() { }
+
+// Only change code below this line
+Dog.prototype = Object.create(Animal.prototype);
+Dog.prototype.constructor = Dog;
+
+Dog.prototype.bark = () => {
+  console.log(`Woof!`);
+}
+// Only change code above this line
+
 let beagle = new Dog();
+
+beagle.eat();
+beagle.bark();
