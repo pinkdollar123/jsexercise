@@ -344,3 +344,67 @@ function Bird() {
   })();
   
   // ? Note that the function has no name and is not stored in a variable. The two parentheses () at the end of the function expression cause it to be immediately executed or invoked. This pattern is known as an immediately invoked function expression or IIFE.
+
+//  * An immediately invoked function expression (IIFE) is often used to group related functionality into a single object or module. For example, an earlier challenge defined two mixins:
+
+function glideMixin(obj) {
+    obj.glide = function() {
+      console.log("Gliding on the water");
+    };
+  }
+  function flyMixin(obj) {
+    obj.fly = function() {
+      console.log("Flying, wooosh!");
+    };
+  }
+  
+// ! We can group these mixins into a module as follows: BELOW
+
+let motionModule = (function () {
+    return {
+      glideMixin: function(obj) {
+        obj.glide = function() {
+          console.log("Gliding on the water");
+        };
+      },
+      flyMixin: function(obj) {
+        obj.fly = function() {
+          console.log("Flying, wooosh!");
+        };
+      }
+    }
+  })();
+
+//   * My answer for IIFE to create a module
+
+let isCuteMixin = function(obj) {
+    obj.isCute = function() {
+      return true;
+    };
+  };
+  let singMixin = function(obj) {
+    obj.sing = function() {
+      console.log("Singing to an awesome tune");
+    };
+  };
+  
+  // ! We can group these mixins into a module as follows: BELOW
+
+  let funModule = (()=>{
+    return{
+      isCuteMixin: (obj) =>{
+        obj.isCute = () => {
+          return true;
+        }
+      },
+  
+      singMixin: (obj) => {
+        obj.sing = () => {
+          console.log(`Singing to an awesome tune`);
+        }
+      },
+  
+    }
+  
+  })();
+  
