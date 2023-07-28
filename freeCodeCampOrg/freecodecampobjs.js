@@ -139,4 +139,95 @@ Bird.prototype = {
     }
   };
 
+//   *Understand Where an Object’s Prototype Comes From
 
+Bird.prototype.isPrototypeOf(duck);
+
+function Dog(name) {
+    this.name = name;
+  }
+  
+  let beagle = new Dog("Snoopy");
+  
+  // Only change code below this line
+  
+  Dog.prototype.isPrototypeOf(beagle);
+
+//   * Understand the Prototype Chain usign Object.prototype.IsPrototypeOf(object instance) The hasOwnProperty method is defined in Object.prototype, which can be accessed by Bird.prototype, which can then be accessed by duck. This is an example of the prototype chain. In this prototype chain, Bird is the supertype for duck, while duck is the subtype. Object is a supertype for both Bird and duck. Object is a supertype for all objects in JavaScript. Therefore, any object can use the hasOwnProperty method.
+
+function Dog(name) {
+    this.name = name;
+  }
+  
+  let beagle = new Dog("Snoopy");
+  
+  Dog.prototype.isPrototypeOf(beagle);  // yields true
+  
+  // Fix the code below so that it evaluates to true
+  Object.isPrototypeOf(Dog.prototype);
+
+//   Object Supertype using DRY Don't Repeat Yourself, all objects has one similar factors being put to their supertype object.
+
+function Cat(name) {
+    this.name = name;
+  }
+  
+  Cat.prototype = {
+    constructor: Cat,
+  };
+  
+  function Bear(name) {
+    this.name = name;
+  }
+  
+  Bear.prototype = {
+    constructor: Bear,
+  };
+  
+  function Animal() { }
+  
+  Animal.prototype = {
+    constructor: Animal,
+    eat: function() {
+      console.log("nom nom nom");
+    }
+  };
+
+
+// * Object Inheritance Technique
+// ? Object.create(objectsupertypename.prototype)
+
+function Animal() { }
+
+Animal.prototype = {
+  constructor: Animal,
+  eat: function() {
+    console.log("nom nom nom");
+  }
+};
+
+// Only change code below this line
+
+let duck = Object.create(Animal.prototype); // Change this line
+let beagle = Object.create(Animal.prototype); // Change this line
+
+// * Set the Child's Prototype to an Instance of the Parent
+
+function Animal() { }
+
+Animal.prototype = {
+  constructor: Animal,
+  eat: function() {
+    console.log("nom nom nom");
+  }
+};
+
+function Dog() { }
+
+// Only change code below this line
+// *1st step createa a prototype of subtype or child of a super set from Animal to Bird which is a subtype/child
+// the Dog class now includes / inherits all the key properties in Animal
+Dog.prototype = Object.create(Animal.prototype);
+let zd = new Dog();
+
+let beagle = new Dog();
