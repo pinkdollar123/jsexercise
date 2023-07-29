@@ -119,3 +119,22 @@ function spinalCase(str) {
 }
 
 spinalCase('ThisIsSpinalTap');
+
+function translatePigLatin(str) {
+
+  // used caret character to check the first character will start and a special range of negated characters that and all the occurences of it
+let consonantRegex = /^[^aeiou]+/;
+
+// matches if given regex to check if the arguments passed to the function matches all the characters for the consonant regex
+let myConsonants = str.match(consonantRegex);
+
+// functional ternary condition
+return myConsonants !== null
+  ? str
+      .replace(consonantRegex, "")
+      .concat(myConsonants)
+      .concat("ay")
+  : str.concat("way");
+}
+
+translatePigLatin("consonant");
