@@ -426,3 +426,57 @@ function alphabeticalOrder(arr) {
 
 alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
 
+const globalArray = [5, 6, 3, 2, 9];
+
+function nonMutatingSort(arr) {
+  // Only change code below this line
+  let newArr = arr.slice(0);
+  console.log(`Unsorted array ${newArr}`)
+
+  newArr.sort((a,b) => {
+    return a - b;
+  })
+  console.log(`Sorted array ${newArr}`);
+  return newArr;
+  // Only change code above this line
+}
+
+nonMutatingSort(globalArray);
+
+// * Split a String into an Array Using the split Method and not accepting punctuations
+
+function splitify(str) {
+  // Only change code below this line
+return str.split(/\W/);
+
+  // Only change code above this line
+}
+
+splitify("Hello World,I-am code");
+
+// *Combine an Array into a String Using the join Method
+
+function sentensify(str) {
+  // Only change code below this line
+  return str.split(/\W/).join(" ");
+
+  // Only change code above this line
+}
+
+sentensify("May-the-force-be-with-you");
+
+// Only change code below this line
+function urlSlug(title) {
+  console.log(title);
+
+  let tester = title.toLowerCase() //mutate the string to lower case
+  .trim() // removes white space on both ends of the string
+  .split(/\s+/) // split the string with no spaces
+  .join("-"); // end of statement which joins the string together with the given argument hypen
+  console.log(tester);
+
+  return tester;
+
+}
+// Only change code above this line
+urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone");g
