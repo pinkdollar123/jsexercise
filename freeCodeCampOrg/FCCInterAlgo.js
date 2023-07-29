@@ -138,3 +138,24 @@ return myConsonants !== null
 }
 
 translatePigLatin("consonant");
+
+// Search and Replace
+
+function myReplace(str, before, after) {
+  console.log(str.slice())
+  
+  var indexChecker = str.indexOf(before);
+  console.log(indexChecker);
+  console.log(str[indexChecker]);
+
+  if(str[indexChecker] === str[indexChecker].toUpperCase()){
+    after = after.charAt(0).toUpperCase() + after.slice(1);
+  }else{
+    after = after.charAt(0).toLowerCase() + after.slice(1);
+  }
+  str = str.replace(before, after);
+  console.log(str);
+  return str;
+}
+
+myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
