@@ -110,4 +110,12 @@ function destroyer(arr) {
   myDog.bark();
   
 
-  
+// * Spinal Tap Case
+function spinalCase(str) {
+ 
+  str = str.replace(/([a-z])([A-Z])/g, "$1 $2");
+  console.log(str.toLowerCase().split(/(?: |_)+/g).join("-"));
+  return str.toLowerCase().split(/(?: |_)+/g).join("-")
+}
+
+spinalCase('ThisIsSpinalTap');
