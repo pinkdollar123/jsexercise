@@ -32,3 +32,21 @@ function diffArray(arr1, arr2) {
   
   diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
 
+// * Destroyer using Seek And Destroy
+
+function destroyer(arr) {
+
+    // * Below provides a container for the arguments object and transform it to an array structure that can be used.
+    const valuesToRemove = Array.from(arguments).splice(1);
+    
+    // ? shows the values
+    console.log(valuesToRemove);
+  
+  // * here we filtered the values that aren't included on the valuesContainer
+    const filteredValues = arr.filter((elem) => !valuesToRemove.includes(elem));
+    console.log(filteredValues);
+  
+    return filteredValues
+  }
+  
+  destroyer([1, 2, 3, 1, 2, 3], 2, 3);g
