@@ -380,3 +380,16 @@ console.log(newArr);
 }
 
 console.log(getRating(watchList));
+
+// * Higher order functions map , filter reduce,
+
+const squareList = (arr) => {
+  // Only change code below this line
+  return arr
+          .filter(props => props > 0 && props % parseInt(num) === 0)
+          .map(num => Math.pow(num, 2));
+  // Only change code above this line
+};
+
+const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
+console.log(squaredIntegers);
