@@ -386,8 +386,8 @@ console.log(getRating(watchList));
 const squareList = (arr) => {
   // Only change code below this line
   return arr
-          .filter(props => props > 0 && props % parseInt(num) === 0)
-          .map(num => Math.pow(num, 2));
+          .filter(props => props > 0 && props % parseInt(props) === 0)
+          .map(props => Math.pow(props, 2));
   // Only change code above this line
 };
 
