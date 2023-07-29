@@ -492,3 +492,24 @@ return arr.every((nums) => {return nums > 0});
 
 
 checkPositive([1, 2, 3, -4, 5]);
+
+// *some method
+
+function checkPositive(arr) {
+  // Only change code below this line
+
+// * some() method works with arrays to check if any element passes a particular test. It returns a Boolean value - true if any of the values meet the criteria, false if not.
+return arr.some(num => num > 0);
+
+  // Only change code above this line
+}
+
+checkPositive([1, 2, 3, -4, 5]);
+
+const checker = (arr) => {
+ return arr.some(num => num >= 10);
+}
+
+let newArr = [5,10,6,7,8];
+console.log(checker(newArr));
+
