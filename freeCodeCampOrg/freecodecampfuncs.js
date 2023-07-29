@@ -513,3 +513,31 @@ const checker = (arr) => {
 let newArr = [5,10,6,7,8];
 console.log(checker(newArr));
 
+// 'add' is a special math function using Currying and Partial Application.
+
+function add(x) {
+  // Returns a new function waiting for 'y', remembering 'x'.
+
+  return function(y) {
+    // Call this function with '(20)', it remembers 'x' and 'y'.
+
+    return function(z) {
+      // Call with '(30)', it remembers 'x', 'y', and 'z'.
+
+      // Now, add 'x', 'y', and 'z' together and get the result.
+
+      return x + y + z;
+    };
+  };
+}
+
+// Now let's use 'add' to do some math step by step!
+
+// Call 'add(10)' to set 'x' as 10.
+// Then, call the result with '(20)' to set 'y' as 20.
+// Finally, call the second result with '(30)' to set 'z' as 30.
+
+// 'add(10)(20)(30)' gives us the final answer: 60!
+
+const result = add(10)(20)(30);
+console.log(result); // Output: 60
