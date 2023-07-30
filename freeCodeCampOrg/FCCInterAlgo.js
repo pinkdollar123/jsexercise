@@ -218,3 +218,29 @@ function fearNotLetter(str) {
 // test here
 fearNotLetter("abce");
 
+// * Sorted union using nested for loops and container to store a new array and accepts the argument objects.
+
+function uniteUnique(arr) {
+  const newArr = [];
+
+  for(let i = 0; i < arguments.length; i++){
+    // console.log(arguments)
+    const arrayArguments = arguments[i];
+    // console.log(arrayArguments);
+
+    for(let j = 0; j < arrayArguments.length; j++){
+      let indexValue = arrayArguments[j];
+      // console.log(indexValue);
+      // console.log(newArr.indexOf(indexValue));
+      if(newArr.indexOf(indexValue) < 0){
+          newArr.push(indexValue);
+          // console.log(newArr);
+      }else{
+        console.log('Meron na ndi na ipapasok')
+      }
+    }
+  }
+  return newArr;
+}
+
+uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
