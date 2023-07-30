@@ -120,6 +120,9 @@ function spinalCase(str) {
 
 spinalCase('ThisIsSpinalTap');
 
+
+// PigsLatin
+
 function translatePigLatin(str) {
 
   // used caret character to check the first character will start and a special range of negated characters that and all the occurences of it
@@ -159,3 +162,38 @@ function myReplace(str, before, after) {
 }
 
 myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
+
+
+// DNA Pairing
+
+function pairElement(str) {
+    
+  // create switch case to pair each given characters as their refernece and output
+const matchBasePairs = (char) => {
+  switch(char){
+    case "A":
+      return ["A", "T"];
+    case "T":
+      return ["T", "A"];
+    case "C":
+      return ["C", "G"];
+    case "G":
+      return ["G", "C"];
+  }
+};
+
+// create an storage of array for the arrays to become arrays of array
+
+const pairs = [];
+console.log(str.length)
+console.log(matchBasePairs(str[0]));
+
+// loops through the given parameter length and pushes all posible cases from the arguments passed to the push method
+for(let i = 0; i < str.length; i++){
+  pairs.push(matchBasePairs(str[i]))
+}
+
+return pairs;
+}
+
+pairElement("GCG");
