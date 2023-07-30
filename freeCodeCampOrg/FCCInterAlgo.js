@@ -244,3 +244,38 @@ function uniteUnique(arr) {
 }
 
 uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+
+// * Convert HTML Entities using switch case and splitting the string and joining them back
+
+function convertHTML(str) {
+
+  let tempString = str.split("");
+  console.log(tempString);
+  console.log(tempString.length)
+
+  for(let i = 0; i < tempString.length; i++){
+    switch(tempString[i]){
+      case "&":
+        tempString[i] = "&amp;";
+        break;
+      case "<":
+        tempString[i] = "&lt;";
+            break;
+      case ">":
+        tempString[i] = "&gt;";
+            break;
+      case '"':
+        tempString[i] = "&quot;";
+            break;
+      case "'":
+        tempString[i] = "&apos;";
+            break;
+     }
+  }
+  console.log(tempString);
+  tempString = tempString.join("");
+  console.log(tempString);
+  return tempString;
+}
+
+convertHTML("Dolce & Gabbana");
