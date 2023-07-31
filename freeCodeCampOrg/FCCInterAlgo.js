@@ -279,3 +279,51 @@ function convertHTML(str) {
 }
 
 convertHTML("Dolce & Gabbana");
+
+// * Sum of All Fibonnaci
+
+function sumFibs(num) {
+  let previousNum = 0;
+  let currentNum = 1;
+  let result = 0;
+ 
+ console.log(num);
+  while(currentNum <= num){
+   //  console.log(currentNum)
+    if(currentNum % 2 !== 0){
+      result += currentNum;
+      console.log(result);
+    }
+    currentNum += previousNum;
+    previousNum = currentNum - previousNum;
+  }
+ 
+   return result;
+ }
+ 
+ sumFibs(4);
+
+ // * sum of all Primes
+
+function sumPrimes(num) {
+  // Check all numbers for primality
+
+  // ? variable to store array;
+  let primes = [];
+  console.log(primes);
+  // loop through the size of num
+  for (let i = 2; i <= num; i++) {
+
+    // provides condition for every num
+    if (primes.every((prime) => i % prime !== 0))
+      primes.push(i);
+  }
+  let container = primes.reduce((sum, prime) => sum + prime, 0);
+  console.log(container);
+  return container;
+  
+}
+
+sumPrimes(10);
+
+ 
