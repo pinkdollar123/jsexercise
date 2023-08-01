@@ -360,4 +360,32 @@ function smallestCommons(arr) {
 
 smallestCommons([1,5]);
 
- 
+//  Drop it Algorithm
+
+function dropElements(arr, func) {
+
+  // ES6 findIndex()
+  let sliceIndex = arr.findIndex(func);
+
+  console.log(`sliceIndex Finder = ${sliceIndex} `);
+  console.log(`Array length = ${arr.length}`)
+
+  return arr.slice(sliceIndex >= 0 ? sliceIndex : arr.length);
+}
+
+// tester
+dropElements([1, 2, 3], function(n) {return n < 3; });
+
+const array = [1,2,3,4,5];
+
+// findIndex() function accepts a function that passes the condition and find the index of the given array and parameter
+let finder = array.findIndex((n) => {
+  return n >= 3;
+})
+// this debug shows that the index found on the given array compared to parameter was located at index 2
+console.log(finder);
+
+// from then this index will be used to determine where's the location that needs to be returned and the rest of array once condition is satisfied
+console.log(array.slice(finder));
+console.log(array.length);
+console.log(array.slice(5))
