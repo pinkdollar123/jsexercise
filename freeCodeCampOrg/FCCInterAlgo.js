@@ -326,4 +326,38 @@ function sumPrimes(num) {
 
 sumPrimes(10);
 
+// Smallet common multiple
+
+function smallestCommons(arr) {
+
+  const [min, max] = arr.sort((a, b) => a - b);
+  const numberDivisors = max - min + 1;
+  // Largest possible value for SCM
+  let upperValue = 1;
+  for (let i = min; i <= max; i++){
+    upperValue *= i;
+  }
+
+  // Test all multiple of 'max'
+  for (let multiple = max; multiple <= upperValue; multiple++){
+     // Check if every value in range divides 'multiple'
+    let divisorCount = 0;
+    for (let i = min; i <= max; i++){
+      // Count divisors
+      if (multiple % i === 0){
+        divisorCount += 1;
+      }
+    }
+    if (divisorCount === numberDivisors){
+      console.log(numberDivisors);
+      console.log(divisorCount);
+      console.log(max);
+      console.log(multiple);
+      return multiple;
+    }
+  }
+}
+
+smallestCommons([1,5]);
+
  
