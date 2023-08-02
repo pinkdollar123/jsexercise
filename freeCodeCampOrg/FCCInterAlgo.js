@@ -389,3 +389,43 @@ console.log(finder);
 console.log(array.slice(finder));
 console.log(array.length);
 console.log(array.slice(5))
+
+// SteamRoll Array
+
+function steamrollArray(arr) {
+
+  const flattenedArray = [];
+
+  for (let i = 0; i < arr.length; i++){
+    if (Array.isArray(arr[i])){
+            // Recursively flatten entries that are arrays
+      //  and push into the flattenedArray
+      flattenedArray.push(...steamrollArray(arr[i]));
+      // console.log(flattenedArray)
+    }else{
+       
+      flattenedArray.push(arr[i])
+      console.log(flattenedArray);
+      // console.log(flattenedArray);
+    }
+  }
+  return flattenedArray;
+}
+
+steamrollArray([1, [2], [3, [[4]]]]);
+
+function steamrollArrayTer(arr) {
+  const flat = [].concat(...arr);
+  return flat.some(Array.isArray) ? steamrollArray(flat) : flat;
+}
+
+steamrollArrayTer([1, [2], [3, [[4]]]]);
+
+
+function steamrollArrayFor(val,flatArr=[]) {
+  val.forEach(item => {
+    if (Array.isArray(item)) steamrollArray(item, flatArr);
+    else flatArr.push(item);
+  });
+  return flatArr;
+}
