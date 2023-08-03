@@ -477,3 +477,19 @@ function truthCheck(collection, pre) {
 }
 
 truthCheck([{ name: "Quincy", role: "Founder", isBot: false }, { name: "Naomi", role: "", isBot: false }, { name: "Camperbot", role: "Bot", isBot: true }], "isBot");
+
+// Arguments Optional
+
+function addTogether() {
+
+  // assigns the arguments object
+  const [first, second] = arguments;
+
+// conditional for the first and second argument if a number
+  if (typeof (first) === "number") {
+    if (typeof (second) === "number") return first + second;
+
+    // if arguments length is 1 return the function with arguments 1 value and the second value which wasn't defined
+    if (arguments.length === 1) return (second) => addTogether(first, second);
+  }
+}
