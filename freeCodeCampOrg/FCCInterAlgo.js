@@ -568,3 +568,4 @@ function orbitalPeriod(arr) {
 }
 
 orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]);
+
