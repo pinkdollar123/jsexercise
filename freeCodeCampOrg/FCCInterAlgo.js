@@ -493,3 +493,42 @@ function addTogether() {
     if (arguments.length === 1) return (second) => addTogether(first, second);
   }
 }
+
+// * Object Constructor using Function and also using getter & setter functions
+
+const Person = function(first, last) {
+
+  let firstName = first;
+  let lastName = last;
+
+  this.getFirstName = () => {
+    return firstName;
+  }
+
+  this.getLastName = () => {
+    return lastName;
+  }
+
+  this.setFirstName = (first) => {
+     return firstName = first;
+  } 
+
+  this.setLastName = (last) => {
+    return lastName = last;
+  }
+
+  this.getFullName = () => {
+    return this.getFirstName() + " " + this.getLastName()
+  };
+
+  this.setFullName = (first, last) => {
+    this.setFirstName(first);
+    this.setLastName(last);
+    return this.getFullName();
+  };
+};
+
+const Bob = new Person("Bob", "Kamote");
+console.log(Bob.getFirstName());
+console.log(Bob.getLastName());
+console.log(Bob.getFullName());
