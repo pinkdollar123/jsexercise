@@ -532,3 +532,39 @@ const Bob = new Person("Bob", "Kamote");
 console.log(Bob.getFirstName());
 console.log(Bob.getLastName());
 console.log(Bob.getFullName());
+
+// Map the debris
+
+function orbitalPeriod(arr) {
+  const GM = 398600.4418;
+  const earthRadius = 6367.4447;
+
+  // Pi formula for given formula
+  const a = 2 * Math.PI;
+  const newArr = [];
+
+  const getOrbPeriod = (obj) => {
+    // the formula for getting the a^3
+    const c = Math.pow(earthRadius + obj.avgAlt, 3);
+    console.log(`this consist an object ${JSON.stringify(obj)} and the value that was used is the object property of avgAlt which is ${obj.avgAlt} `)
+    // formula translated for a^3 divided by u which is b variable
+    const b = Math.sqrt(c / GM);
+
+  // The values should be rounded to the nearest whole number. The body being orbited is Earth.
+  // Math.round() for this one
+    const orbPeriod = Math.round(a * b);
+
+    // return a new object
+     return {name: obj.name, orbitalPeriod: orbPeriod};
+  }
+
+// iterate over the array of object properties using let var "in" array
+  for (let elem in arr) {
+    console.log(arr[elem]);
+    newArr.push(getOrbPeriod(arr[elem]));
+  }
+
+  return newArr;
+}
+
+orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]);
