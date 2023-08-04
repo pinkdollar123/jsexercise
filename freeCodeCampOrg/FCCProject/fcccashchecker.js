@@ -50,3 +50,17 @@ function checkCashRegister(price, cash, cid) {
   }
   
   checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]);
+
+  function find_max(nums){
+    let max_num = Number.NEGATIVE_INFINITY;
+    console.log(max_num);
+
+    for (let num of nums){
+      if(num > max_num){
+      // fill in the mising line here
+      }
+    }
+    return max_num;
+  }
+
+  find_max([5]);
